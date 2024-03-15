@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc265f56b3312c2468d81a011a468856, type: 3}
+  m_Name: level
+  m_EditorClassIdentifier: 
+  LevelData:
+  - levelNum: 0
+    levelprefab: {fileID: 2545395496824577691, guid: f6580e7eaa068bc4e9546131c638732a, type: 3}
+    coinsEarned: 10
+  - levelNum: 1
+    levelprefab: {fileID: 2545395496824577691, guid: 3acf5edc8a413234d9a466b9f7eb726b, type: 3}
+    coinsEarned: 10
+  - levelNum: 2
+    levelprefab: {fileID: 2545395496824577691, guid: 7b409e91f09e6f449a5ff785291f208b, type: 3}
+    coinsEarned: 10
+  - levelNum: 3
+    levelprefab: {fileID: 2545395496824577691, guid: bd28cf935b890d14caf5065be2aea03b, type: 3}
+    coinsEarned: 10
+  - levelNum: 4
+    levelprefab: {fileID: 2545395496824577691, guid: 9d41827f4f40bee4dbf21d3dcab00663, type: 3}
+    coinsEarned: 10
