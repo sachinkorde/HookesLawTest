@@ -1,6 +1,4 @@
-using UnityEditor.TestTools.CodeCoverage;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class ScoreHandler : MonoBehaviour
 {
@@ -16,24 +14,12 @@ public class ScoreHandler : MonoBehaviour
     {
         if(collision.gameObject.name == "Projectile")
         {
-            gameObject.SetActive(false);
-            LoadLevel.Instance.levelNum++;
             GameMechanism.Instance.score += 10;
 
-            LoadLevel.Instance.levelNum++;
-
-            lvl = LoadLevel.Instance.levelNum;
-            PlayerPrefs.SetInt("levelNumber", lvl);
-
-            if (levels.LevelData[lvl].coinsEarned ==  GameMechanism.Instance.score )
+            if (levels.LevelData[lvl].coinsEarned == GameMechanism.Instance.score)
             {
-                LoadNextLevel();
+                PopupHandler.Instance.SetEnable();
             }
         }
-    }
-
-    void LoadNextLevel()
-    {
-        SceneManager.LoadScene(0);
     }
 }

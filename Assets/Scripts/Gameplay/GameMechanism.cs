@@ -11,7 +11,7 @@ public class GameMechanism : MonoBehaviour
     public Rigidbody projectile; // The projectile to be launched
     public LineRenderer band; // Visual representation of the slingshot band
     public GameObject shotWood; // Reference to the shot wood object
-    public GameObject prefab; // Prefab to be used with the object pool
+    //public GameObject prefab; // Prefab to be used with the object pool
 
     [Header("Physics Settings")]
     [SerializeField] private float springConstant = 10f; // Spring force constant
@@ -24,19 +24,20 @@ public class GameMechanism : MonoBehaviour
     public int score;
 
     // Object pooling
-    [SerializeField] private ObjectPool<GameObject> pool;
+    //[SerializeField] private ObjectPool<GameObject> pool;
+    [SerializeField] private PopupHandler popupHandler;
 
     private void Awake()
     {
         Instance = this;
 
         // Initialize the object pool
-        pool = new ObjectPool<GameObject>(
+        /*pool = new ObjectPool<GameObject>(
             createFunc: CreatePooledItem,
             actionOnGet: OnTakeFromPool,
             collectionCheck: false,
             defaultCapacity: 10,
-            maxSize: 20);
+            maxSize: 20);*/
     }
 
     private void Start()
@@ -116,15 +117,15 @@ public class GameMechanism : MonoBehaviour
         band.SetPosition(2, rightAnchor.position);
     }
 
-    private GameObject CreatePooledItem()
+    /*private GameObject CreatePooledItem()
     {
         // Object pool item creation logic
         return Instantiate(prefab);
-    }
+    }*/
 
-    private void OnTakeFromPool(GameObject obj)
+    /*private void OnTakeFromPool(GameObject obj)
     {
         // Action to perform when an object is taken from the pool
         obj.SetActive(true);
-    }
+    }*/
 }
